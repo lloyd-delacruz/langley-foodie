@@ -29,7 +29,7 @@ export default function AboutSection() {
             <h2 className="text-4xl sm:text-5xl font-serif font-bold text-foreground mb-6">
               Hey there, I'm{" "}
               <span className="font-script" style={{ color: "hsl(var(--primary))" }}>
-                Langley!
+                Adrienne Omega!
               </span>
             </h2>
 
