@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 48 27% 97%; /* #F7F5F3 */
+  --foreground: 0 0% 29%; /* #4A4A4A */
+  --muted: 30 15% 95%; /* #F2F0EC */
+  --muted-foreground: 0 0% 45%; /* #737373 */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 0 0% 29%; /* #4A4A4A */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 0 0% 29%; /* #4A4A4A */
+  --border: 30 15% 90%; /* #E5E1DC */
+  --input: 30 15% 90%; /* #E5E1DC */
+  --primary: 28 38% 69%; /* #D4A574 */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 85 22% 57%; /* #8B9D83 */
+  --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+  --accent: 35 49% 78%; /* #E8C5A0 */
+  --accent-foreground: 0 0% 29%; /* #4A4A4A */
+  --destructive: 0 62% 58%; /* #E55E5E */
+  --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+  --ring: 28 38% 69%; /* #D4A574 */
+  --radius: 1rem;
+  
+  /* Custom tropical color palette */
+  --sage: 85 22% 57%; /* #8B9D83 */
+  --coral: 15 44% 58%; /* #C97D60 */
+  --sand: 48 27% 97%; /* #F7F5F3 */
+  --cream: 48 41% 96%; /* #F7F5F3 */
+  --charcoal: 0 0% 29%; /* #4A4A4A */
+  --peach: 35 49% 78%; /* #E8C5A0 */
+  --warmgray: 30 10% 96%; /* #F5F5F0 */
+}
+
+.dark {
+  --background: 224 71% 4%; /* #0C0A09 */
+  --foreground: 213 31% 91%; /* #E4E4E7 */
+  --muted: 223 47% 11%; /* #1C1917 */
+  --muted-foreground: 215 20% 65%; /* #A1A1AA */
+  --popover: 224 71% 4%; /* #0C0A09 */
+  --popover-foreground: 213 31% 91%; /* #E4E4E7 */
+  --card: 224 71% 4%; /* #0C0A09 */
+  --card-foreground: 213 31% 91%; /* #E4E4E7 */
+  --border: 216 34% 17%; /* #27272A */
+  --input: 216 34% 17%; /* #27272A */
+  --primary: 28 38% 69%; /* #D4A574 */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 85 22% 57%; /* #8B9D83 */
+  --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+  --accent: 216 34% 17%; /* #27272A */
+  --accent-foreground: 213 31% 91%; /* #E4E4E7 */
+  --destructive: 0 63% 31%; /* #7F1D1D */
+  --destructive-foreground: 213 31% 91%; /* #E4E4E7 */
+  --ring: 28 38% 69%; /* #D4A574 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+@layer utilities {
+  .leaf-decoration {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0c11 0 20 9 20 20 0 11-9 20-20 20S0 31 0 20 9 0 20 0z' fill='%23D4A574' fill-opacity='0.1'/%3E%3C/svg%3E");
+  }
+
+  .tropical-leaf::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M10,90 Q30,30 50,50 Q70,30 90,90 Q50,70 10,90' fill='%238B9D83' opacity='0.3'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
