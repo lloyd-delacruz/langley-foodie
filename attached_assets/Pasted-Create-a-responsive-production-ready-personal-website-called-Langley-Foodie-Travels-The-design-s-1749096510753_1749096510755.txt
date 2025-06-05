@@ -1,0 +1,80 @@
+Create a responsive, production-ready personal website called “Langley Foodie Travels.” The design should be inspired exactly by the image provided (warm, minimalist, feminine, tropical leaves, soft earthy tones). Follow modern UI/UX best practices, mobile responsiveness, and clean component structure using the best front-end tools available.
+
+💡 Design Goals
+A warm, elegant aesthetic inspired by travel and motherhood
+
+Use clean white space, rounded corners, soft shadows, and natural shapes
+
+Consistent typography hierarchy with modern serif for headings and clean sans-serif for body
+
+Include subtle animations on scroll and hover for interactivity
+
+🧭 Pages & Sections
+1. Navigation Bar (Sticky)
+Logo: Langley Foodie Travels
+
+Menu: Home | About | Blog | Langley Bites | Travels | Mom Life | Reels | Contact
+
+On mobile, collapse into a hamburger menu
+
+2. Hero Section
+Full-width section with a rounded photo of the blogger
+
+Title: Langley Foodie Travels
+
+Illustrated tropical leaves in the background
+
+Soft gradient or textured background
+
+3. Feature Grid (4 cards in 2x2 layout)
+Each block includes image, title, and subtitle exactly like:
+
+Langley Bites — Restaurant reviews
+
+Tropical Travels — Highlighting my family-friendly trips
+
+Mom Life Eats — Kid-friendly food and experiences
+
+Reel Roundups — Focusing on my Instagram Reels
+
+4. About Page
+Brief story about the blogger, values, family
+
+Professional photo and soft call-to-action
+
+5. Blog Section
+Cards for each blog post with featured image, date, tags, excerpt
+
+Posts sorted by category: Food, Travel, Parenting, Reels
+
+6. Travel Gallery Page
+Grid of destinations with images and short captions
+
+Clickable for full-page view
+
+7. Reels Page
+Embedded Instagram reels
+
+Optionally filtered by theme
+
+8. Contact Page
+Simple form: Name, Email, Message
+
+Social media links: Instagram, Email, YouTube
+
+🛠️ Technology Stack (Frontend Best Practices)
+Framework: React (with Cursor AI)
+
+Styling: Tailwind CSS (utility-first, mobile-first, responsive design)
+
+Routing: React Router or Next.js-style dynamic routing (if available)
+
+Animation: Framer Motion (for smooth transitions and micro-interactions)
+
+Image Optimization: Use next/image or responsive <img> components
+
+State Management: Lightweight (React useState/useEffect)
+
+Performance: Lazy loading images, SEO meta tags, mobile-first breakpoints
+
+Accessibility: Alt text, keyboard navigation, semantic HTML
