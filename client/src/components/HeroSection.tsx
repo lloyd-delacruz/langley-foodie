@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import langleyPhoto from "@assets/langley_foodie.jpg";
 
 export default function HeroSection() {
   return (
@@ -7,49 +8,54 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-sand via-cream to-accent/20"
     >
       {/* Ocean wave background */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-secondary/10 to-transparent">
-        <svg className="absolute bottom-0 w-full h-16" viewBox="0 0 1200 120" fill="none">
-          <path d="M0,60 C300,100 900,20 1200,60 L1200,120 L0,120 Z" fill="hsl(var(--secondary))" opacity="0.1"/>
-          <path d="M0,80 C300,40 900,80 1200,40 L1200,120 L0,120 Z" fill="hsl(var(--primary))" opacity="0.1"/>
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-blue-200/30 to-transparent">
+        <svg className="absolute bottom-0 w-full h-24" viewBox="0 0 1200 120" fill="none">
+          <path d="M0,60 C300,100 900,20 1200,60 L1200,120 L0,120 Z" fill="#8B9D83" opacity="0.3"/>
+          <path d="M0,80 C300,40 900,80 1200,40 L1200,120 L0,120 Z" fill="#D4A574" opacity="0.2"/>
         </svg>
       </div>
 
       {/* Tropical leaf patterns */}
-      <div className="absolute inset-0 opacity-10">
-        <svg className="absolute top-10 left-10 w-24 h-24 text-secondary" viewBox="0 0 100 100" fill="currentColor">
+      <div className="absolute inset-0 opacity-30">
+        <svg className="absolute top-10 left-10 w-32 h-32 text-green-600" viewBox="0 0 100 100" fill="currentColor">
           <path d="M50 10 C30 30, 30 70, 50 90 C70 70, 70 30, 50 10 Z"/>
         </svg>
-        <svg className="absolute top-20 right-16 w-20 h-20 text-primary rotate-45" viewBox="0 0 100 100" fill="currentColor">
+        <svg className="absolute top-20 right-16 w-28 h-28 text-green-700 rotate-45" viewBox="0 0 100 100" fill="currentColor">
           <path d="M50 10 C30 30, 30 70, 50 90 C70 70, 70 30, 50 10 Z"/>
         </svg>
-        <svg className="absolute bottom-32 left-1/4 w-16 h-16 text-secondary rotate-12" viewBox="0 0 100 100" fill="currentColor">
+        <svg className="absolute bottom-32 left-1/4 w-24 h-24 text-green-500 rotate-12" viewBox="0 0 100 100" fill="currentColor">
           <path d="M50 10 C30 30, 30 70, 50 90 C70 70, 70 30, 50 10 Z"/>
         </svg>
-        <svg className="absolute top-1/3 right-1/4 w-14 h-14 text-accent -rotate-12" viewBox="0 0 100 100" fill="currentColor">
+        <svg className="absolute top-1/3 right-1/4 w-20 h-20 text-green-600 -rotate-12" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 10 C30 30, 30 70, 50 90 C70 70, 70 30, 50 10 Z"/>
+        </svg>
+        <svg className="absolute bottom-20 right-10 w-26 h-26 text-green-500 rotate-45" viewBox="0 0 100 100" fill="currentColor">
           <path d="M50 10 C30 30, 30 70, 50 90 C70 70, 70 30, 50 10 Z"/>
         </svg>
       </div>
 
       {/* Banana plant silhouettes */}
-      <div className="absolute top-0 left-0 w-32 h-full opacity-5">
+      <div className="absolute top-0 left-0 w-40 h-full opacity-20">
         <svg className="w-full h-full" viewBox="0 0 100 200" fill="none">
-          <path d="M20 200 Q25 150, 30 100 Q35 50, 40 0" stroke="hsl(var(--secondary))" strokeWidth="8"/>
-          <path d="M40 20 Q50 15, 60 25 Q65 35, 55 45" fill="hsl(var(--secondary))"/>
-          <path d="M35 40 Q45 35, 55 45 Q60 55, 50 65" fill="hsl(var(--secondary))"/>
-          <path d="M30 60 Q40 55, 50 65 Q55 75, 45 85" fill="hsl(var(--secondary))"/>
+          <path d="M20 200 Q25 150, 30 100 Q35 50, 40 0" stroke="#8B9D83" strokeWidth="8"/>
+          <path d="M40 20 Q50 15, 60 25 Q65 35, 55 45" fill="#8B9D83"/>
+          <path d="M35 40 Q45 35, 55 45 Q60 55, 50 65" fill="#8B9D83"/>
+          <path d="M30 60 Q40 55, 50 65 Q55 75, 45 85" fill="#8B9D83"/>
+          <path d="M25 80 Q35 75, 45 85 Q50 95, 40 105" fill="#8B9D83"/>
         </svg>
       </div>
-      <div className="absolute top-0 right-0 w-28 h-full opacity-5 transform scale-x-[-1]">
+      <div className="absolute top-0 right-0 w-36 h-full opacity-20 transform scale-x-[-1]">
         <svg className="w-full h-full" viewBox="0 0 100 200" fill="none">
-          <path d="M20 200 Q25 150, 30 100 Q35 50, 40 0" stroke="hsl(var(--primary))" strokeWidth="6"/>
-          <path d="M40 30 Q50 25, 60 35 Q65 45, 55 55" fill="hsl(var(--primary))"/>
-          <path d="M35 50 Q45 45, 55 55 Q60 65, 50 75" fill="hsl(var(--primary))"/>
+          <path d="M20 200 Q25 150, 30 100 Q35 50, 40 0" stroke="#D4A574" strokeWidth="6"/>
+          <path d="M40 30 Q50 25, 60 35 Q65 45, 55 55" fill="#D4A574"/>
+          <path d="M35 50 Q45 45, 55 55 Q60 65, 50 75" fill="#D4A574"/>
+          <path d="M30 70 Q40 65, 50 75 Q55 85, 45 95" fill="#D4A574"/>
         </svg>
       </div>
       
       {/* Floating tropical elements */}
       <motion.div
-        className="absolute top-20 left-1/4 w-8 h-8 opacity-20"
+        className="absolute top-20 left-1/4 text-4xl opacity-60"
         animate={{
           y: [0, -15, 0],
           rotate: [0, 10, 0],
@@ -63,7 +69,7 @@ export default function HeroSection() {
         🌴
       </motion.div>
       <motion.div
-        className="absolute top-1/3 right-1/3 w-6 h-6 opacity-30"
+        className="absolute top-1/3 right-1/3 text-3xl opacity-70"
         animate={{
           y: [0, -12, 0],
           rotate: [0, -8, 0],
@@ -78,7 +84,7 @@ export default function HeroSection() {
         🥥
       </motion.div>
       <motion.div
-        className="absolute bottom-1/3 left-1/5 w-6 h-6 opacity-25"
+        className="absolute bottom-1/3 left-1/5 text-3xl opacity-60"
         animate={{
           y: [0, -10, 0],
           rotate: [0, 15, 0],
@@ -93,7 +99,7 @@ export default function HeroSection() {
         🍌
       </motion.div>
       <motion.div
-        className="absolute top-2/3 right-1/5 w-5 h-5 opacity-20"
+        className="absolute top-2/3 right-1/5 text-3xl opacity-60"
         animate={{
           y: [0, -8, 0],
           rotate: [0, -12, 0],
@@ -106,6 +112,21 @@ export default function HeroSection() {
         }}
       >
         🌺
+      </motion.div>
+      <motion.div
+        className="absolute top-40 right-1/2 text-2xl opacity-50"
+        animate={{
+          y: [0, -6, 0],
+          rotate: [0, 8, 0],
+        }}
+        transition={{
+          duration: 9,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 3,
+        }}
+      >
+        🌊
       </motion.div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
@@ -123,7 +144,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/attached_assets/langley_foodie.jpg"
+                src={langleyPhoto}
                 alt="Langley - Food & Travel Blogger"
                 className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover shadow-2xl border-4 border-white"
               />
