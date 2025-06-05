@@ -67,7 +67,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/langley-photo.jpg"
+                src="/attached_assets/langley_foodie_1749098190121.jpg"
                 alt="Langley - Food & Travel Blogger"
                 className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover shadow-2xl border-4 border-white"
               />
