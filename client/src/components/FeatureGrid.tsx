@@ -50,13 +50,6 @@ const features = [
 ];
 
 export default function FeatureGrid() {
-  const handleFeatureClick = (id: string) => {
-    const element = document.querySelector(`#${id}`);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,10 +77,10 @@ export default function FeatureGrid() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card
-                className={`group cursor-pointer transform transition-all duration-300 hover:scale-105 bg-gradient-to-br ${feature.gradient} p-8 shadow-lg hover:shadow-2xl border-0`}
-                onClick={() => handleFeatureClick(feature.id)}
-              >
+              <Link href={feature.href}>
+                <Card
+                  className={`group cursor-pointer transform transition-all duration-300 hover:scale-105 bg-gradient-to-br ${feature.gradient} p-8 shadow-lg hover:shadow-2xl border-0`}
+                >
                 <img
                   src={feature.image}
                   alt={feature.title}
@@ -127,7 +120,8 @@ export default function FeatureGrid() {
                     →
                   </motion.span>
                 </div>
-              </Card>
+                </Card>
+              </Link>
             </motion.div>
           ))}
         </div>
