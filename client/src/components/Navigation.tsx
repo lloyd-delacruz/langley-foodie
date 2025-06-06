@@ -6,6 +6,7 @@ import { Link, useLocation } from "wouter";
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,22 +18,18 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#blog", label: "Blog" },
-    { href: "#langley-bites", label: "Langley Bites" },
-    { href: "#travels", label: "Travels" },
-    { href: "#mom-life", label: "Mom's Life" },
-    { href: "#reels", label: "Reels" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/blog", label: "Blog" },
+    { href: "/langley-bites", label: "Langley Bites" },
+    { href: "/travels", label: "Travels" },
+    { href: "/mom-life", label: "Mom Life" },
+    { href: "/reels", label: "Reels" },
+    { href: "/contact", label: "Contact" },
   ];
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = () => {
     setIsMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   return (
@@ -47,33 +44,39 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <motion.h1
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-serif font-semibold"
-              style={{ color: "hsl(var(--primary))" }}
-            >
-              <span className="font-script" style={{ color: "hsl(var(--secondary))" }}>
-                Langley
-              </span>{" "}
-              Foodie Travels
-            </motion.h1>
+            <Link href="/">
+              <motion.h1
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="text-2xl font-serif font-semibold cursor-pointer"
+                style={{ color: "hsl(var(--primary))" }}
+              >
+                <span className="font-script" style={{ color: "hsl(var(--secondary))" }}>
+                  Langley
+                </span>{" "}
+                Foodie Travels
+              </motion.h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item, index) => (
-                <motion.button
+                <motion.div
                   key={item.href}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
                 >
-                  {item.label}
-                </motion.button>
+                  <Link href={item.href}>
+                    <span className={`text-foreground hover:text-primary transition-colors duration-200 font-medium cursor-pointer ${
+                      location === item.href ? 'text-primary' : ''
+                    }`}>
+                      {item.label}
+                    </span>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -101,16 +104,23 @@ export default function Navigation() {
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item, index) => (
-                <motion.button
+                <motion.div
                   key={item.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  onClick={() => handleNavClick(item.href)}
-                  className="block w-full text-left px-3 py-2 text-foreground hover:text-primary transition-colors"
                 >
-                  {item.label}
-                </motion.button>
+                  <Link href={item.href}>
+                    <span 
+                      onClick={handleNavClick}
+                      className={`block w-full text-left px-3 py-2 text-foreground hover:text-primary transition-colors cursor-pointer ${
+                        location === item.href ? 'text-primary' : ''
+                      }`}
+                    >
+                      {item.label}
+                    </span>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.div>

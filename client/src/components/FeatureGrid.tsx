@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
+import { Link } from "wouter";
 
 const features = [
   {
     id: "langley-bites",
+    href: "/langley-bites",
     title: "Langley Bites",
     subtitle: "Restaurant reviews",
     description: "Honest reviews of Langley's best eats, from hidden gems to family favorites that won't break the bank.",
@@ -14,6 +16,7 @@ const features = [
   },
   {
     id: "tropical-travels",
+    href: "/travels",
     title: "Tropical Travels",
     subtitle: "Highlighting my family-friendly trips",
     description: "Adventure awaits! Discover amazing destinations that are perfect for families, complete with kid-friendly activities.",
@@ -24,6 +27,7 @@ const features = [
   },
   {
     id: "mom-life-eats",
+    href: "/mom-life",
     title: "Mom Life Eats",
     subtitle: "Kid-friendly food and experiences",
     description: "Real talk about feeding families, quick meal solutions, and creating food memories with little ones.",
@@ -34,6 +38,7 @@ const features = [
   },
   {
     id: "reel-roundups",
+    href: "/reels",
     title: "Reel Roundups",
     subtitle: "Focusing on my Instagram Reels",
     description: "Behind-the-scenes moments, quick food tips, and travel highlights in bite-sized video content.",
