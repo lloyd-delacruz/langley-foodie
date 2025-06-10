@@ -114,6 +114,87 @@ export async function createApp() {
     });
   });
 
+  // Catch-all for React router (non-API routes)
+  app.get('*', (req, res) => {
+    // Return a simple HTML page for non-API routes
+    res.status(200).send(`
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Langley Foodie</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+          body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 40px; 
+            text-align: center; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .container { 
+            max-width: 600px; 
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+          }
+          .success { color: #4ade80; }
+          .info { 
+            color: #e2e8f0; 
+            margin-top: 2rem;
+          }
+          ul { 
+            text-align: left; 
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            list-style: none;
+          }
+          li { 
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+          }
+          .badge {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.875rem;
+            margin-left: 0.5rem;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <h1 class="success">🎉 Langley Foodie is Live!</h1>
+          <p>Your application has been successfully deployed to Vercel.</p>
+          <span class="badge">API Working</span>
+          <div class="info">
+            <h3>Available API Endpoints:</h3>
+            <ul>
+              <li><strong>GET /api/health</strong> - Health check</li>
+              <li><strong>GET /api/posts</strong> - Get all posts</li>
+              <li><strong>GET /api/posts/:id</strong> - Get specific post</li>
+              <li><strong>GET /api/me</strong> - Get user profile</li>
+            </ul>
+          </div>
+          <p><small>React frontend will be integrated once the build process is complete.</small></p>
+        </div>
+      </body>
+      </html>
+    `);
+  });
+
   return app;
 }
 
