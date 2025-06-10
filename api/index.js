@@ -1,4 +1,4 @@
-import express from 'express';
+import { createApp } from './server.js';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { existsSync } from 'fs';
@@ -8,56 +8,43 @@ const __dirname = dirname(__filename);
 
 let app = null;
 
-async function createApp() {
-  if (app) return app;
-  
-  // Set NODE_ENV to production for Vercel
-  process.env.NODE_ENV = 'production';
-  
-  const appInstance = express();
-  appInstance.use(express.json());
-  appInstance.use(express.urlencoded({ extended: false }));
-
-  // Health check route
-  appInstance.get('/api/health', (req, res) => {
-    res.json({ 
-      status: 'ok', 
-      message: 'Langley Foodie server is running on Vercel',
-      timestamp: new Date().toISOString(),
-      env: process.env.NODE_ENV || 'production'
-    });
-  });
-
+export default async function handler(req, res) {
   try {
-    // Import and register routes
-    const { registerRoutes } = await import('../dist/index.js');
-    await registerRoutes(appInstance);
-    
-    // Serve static files from dist/public
-    const distPath = join(__dirname, '..', 'dist', 'public');
-    if (existsSync(distPath)) {
-      appInstance.use(express.static(distPath));
+    if (!app) {
+      console.log('Initializing app...');
+      app = await createApp();
+      
+      // Add static file serving for the React app
+      const indexPath = join(__dirname, '..', 'dist', 'public', 'index.html');
+      
+      // Handle React router paths
+      app.get('*', (request, response) => {
+        // Don't serve index.html for API routes
+        if (request.path.startsWith('/api/')) {
+          return response.status(404).json({ error: 'API endpoint not found' });
+        }
+        
+        if (existsSync(indexPath)) {
+          response.sendFile(indexPath);
+        } else {
+          response.status(404).json({ 
+            error: 'React app not found',
+            indexPath,
+            indexExists: existsSync(indexPath)
+          });
+        }
+      });
+      
+      console.log('App initialized successfully');
     }
     
-    // Catch-all handler for React routes
-    appInstance.get('*', (req, res) => {
-      const indexPath = join(distPath, 'index.html');
-      if (existsSync(indexPath)) {
-        res.sendFile(indexPath);
-      } else {
-        res.status(404).send('Not found');
-      }
-    });
-    
+    return app(req, res);
   } catch (error) {
-    console.error('Error setting up app:', error);
+    console.error('Handler error:', error);
+    res.status(500).json({ 
+      error: 'Handler initialization failed', 
+      message: error.message,
+      stack: error.stack
+    });
   }
-
-  app = appInstance;
-  return app;
-}
-
-export default async function handler(req, res) {
-  const appInstance = await createApp();
-  return appInstance(req, res);
 } 
