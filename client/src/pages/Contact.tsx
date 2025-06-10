@@ -1,15 +1,9 @@
-import Navigation from "@/components/Navigation";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+import ContactSection from "@/features/contact/ContactSection";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main className="pt-16">
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <main className="pt-16">
+      <ContactSection />
+    </main>
   );
 }

@@ -1,15 +1,9 @@
-import Navigation from "@/components/Navigation";
-import AboutSection from "@/components/AboutSection";
-import Footer from "@/components/Footer";
+import AboutSection from "@/features/about/AboutSection";
 
 export default function About() {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main className="pt-16">
-        <AboutSection />
-      </main>
-      <Footer />
-    </div>
+    <main className="pt-16">
+      <AboutSection />
+    </main>
   );
 }

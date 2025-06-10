@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(rm:*)",
+      "Bash(ls:*)",
+      "Bash(supabase start:*)",
+      "Bash(npm run setup-supabase:*)",
+      "Bash(supabase db reset:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(npm run dev:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(find:*)",
+      "Bash(curl:*)",
+      "Bash(supabase status:*)",
+      "Bash(./start-dev.sh:*)",
+      "Bash(node:*)",
+      "Bash(NODE_ENV=development npx tsx server/index.ts)",
+      "Bash(timeout:*)",
+      "Bash(NODE_ENV=development npm run dev)",
+      "Bash(nc:*)",
+      "Bash(pkill:*)",
+      "Bash(true)"
+    ],
+    "deny": []
+  }
+}

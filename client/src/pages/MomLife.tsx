@@ -1,15 +1,9 @@
-import Navigation from "@/components/Navigation";
-import MomLifeSection from "@/components/MomLifeSection";
-import Footer from "@/components/Footer";
+import MomLifeSection from "@/features/mom-life/MomLifeSection";
 
 export default function MomLife() {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main className="pt-16">
-        <MomLifeSection />
-      </main>
-      <Footer />
-    </div>
+    <main className="pt-16">
+      <MomLifeSection />
+    </main>
   );
 }

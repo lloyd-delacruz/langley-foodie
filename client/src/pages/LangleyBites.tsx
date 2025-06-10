@@ -1,15 +1,9 @@
-import Navigation from "@/components/Navigation";
-import LangleyBitesSection from "@/components/LangleyBitesSection";
-import Footer from "@/components/Footer";
+import LangleyBitesSection from "@/features/blog/LangleyBitesSection";
 
 export default function LangleyBites() {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main className="pt-16">
-        <LangleyBitesSection />
-      </main>
-      <Footer />
-    </div>
+    <main className="pt-16">
+      <LangleyBitesSection />
+    </main>
   );
 }

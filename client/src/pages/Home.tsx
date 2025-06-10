@@ -1,17 +1,11 @@
-import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
-import FeatureGrid from "@/components/FeatureGrid";
-import Footer from "@/components/Footer";
+import HeroSection from "@/features/home/HeroSection";
+import FeatureGrid from "@/features/home/FeatureGrid";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main>
-        <HeroSection />
-        <FeatureGrid />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <HeroSection />
+      <FeatureGrid />
+    </>
   );
 }

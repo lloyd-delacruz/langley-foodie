@@ -23,7 +23,7 @@ export default function Navigation() {
     { href: "/blog", label: "Blog" },
     { href: "/langley-bites", label: "Langley Bites" },
     { href: "/travels", label: "Travels" },
-    { href: "/mom-life", label: "Mom Life" },
+    { href: "/mom-life", label: "Mom's Life" },
     { href: "/reels", label: "Reels" },
     { href: "/contact", label: "Contact" },
   ];
