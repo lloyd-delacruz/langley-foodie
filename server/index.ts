@@ -22,16 +22,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Health check route
-app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'ok', 
-    message: 'Langley Foodie server is running',
-    timestamp: new Date().toISOString(),
-    env: process.env.NODE_ENV || 'development'
-  });
-});
-
 async function startServer() {
   try {
     log("🍽️ Starting Langley Foodie server...");
@@ -41,11 +31,11 @@ async function startServer() {
     log("✅ API routes registered");
 
     // Error handling middleware
-    app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+    app.use((err: Error & { status?: number; statusCode?: number }, _req: Request, res: Response, _next: NextFunction) => {
       const status = err.status || err.statusCode || 500;
       const message = err.message || "Internal Server Error";
-      
-      log(`❌ Error ${status}: ${message} - ${req.method} ${req.path}`);
+
+      log(`❌ Error ${status}: ${message}`);
       
       if (!res.headersSent) {
         res.status(status).json({ error: message });
