@@ -13,7 +13,7 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
+              src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700"
               alt="Langley with her family"
               className="w-full h-96 lg:h-[500px] object-cover rounded-3xl shadow-2xl"
             />

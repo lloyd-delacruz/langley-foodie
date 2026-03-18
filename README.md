@@ -1,4 +1,4 @@
-# 🍽️ Langley Foodie
+# 🍽️ Langley Foodie - Adrienne Omega's Culinary Journey
 
 A modern, responsive food blog showcasing culinary adventures, travel experiences, mom life, and creative reels from Langley and beyond.
 

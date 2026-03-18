@@ -11,7 +11,7 @@ const blogPosts = [
     excerpt: "After trying every smoothie bowl in town, I'm sharing my top picks for the most Instagram-worthy and delicious...",
     category: "Food",
     date: "March 15, 2024",
-    image: "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     color: "primary",
   },
   {
@@ -20,7 +20,7 @@ const blogPosts = [
     excerpt: "From snorkeling with sea turtles to the best shaved ice on the island, here's everything you need to know...",
     category: "Travel",
     date: "March 12, 2024",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    image: "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     color: "secondary",
   },
   {
@@ -29,7 +29,7 @@ const blogPosts = [
     excerpt: "Yes, there will be flour everywhere. No, it won't look Pinterest-perfect. But here's why it's worth it...",
     category: "Parenting",
     date: "March 10, 2024",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    image: "https://images.unsplash.com/photo-1556910602-3884ee920359?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     color: "coral",
   },
   {
@@ -47,7 +47,7 @@ const blogPosts = [
     excerpt: "After countless beach trips, I've perfected the art of family beach days. Here's my tried-and-true packing list...",
     category: "Travel",
     date: "March 5, 2024",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    image: "https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     color: "secondary",
   },
   {
@@ -56,7 +56,7 @@ const blogPosts = [
     excerpt: "Ever wondered how those perfect food videos come together? Here's my honest take on creating content...",
     category: "Reels",
     date: "March 3, 2024",
-    image: "https://images.unsplash.com/photo-1493804714600-6edb1cd93080?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     color: "accent",
   },
 ];
