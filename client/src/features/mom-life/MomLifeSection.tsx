@@ -37,7 +37,7 @@ const momLifeContent = [
     id: 4,
     title: "Kitchen Helpers: Cooking with Kids",
     category: "Family Cooking",
-    image: "https://images.unsplash.com/photo-1556910602-3884ee920359?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     excerpt: "Cooking with kids is messy, chaotic, and absolutely worth it. Here's how to make it work (and actually enjoy it).",
     tips: ["Age-appropriate tasks", "Embrace the mess", "Make it educational"],
     date: "November 28, 2023",

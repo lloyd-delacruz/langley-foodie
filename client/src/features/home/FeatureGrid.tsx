@@ -42,7 +42,7 @@ const features = [
     title: "Reel Roundups",
     subtitle: "Focusing on my Instagram Reels",
     description: "Behind-the-scenes moments, quick food tips, and travel highlights in bite-sized video content.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+    image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
     icon: "📱",
     color: "accent",
     gradient: "from-accent/10 to-accent/5",

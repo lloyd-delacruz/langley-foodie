@@ -29,7 +29,7 @@ const blogPosts = [
     excerpt: "Yes, there will be flour everywhere. No, it won't look Pinterest-perfect. But here's why it's worth it...",
     category: "Parenting",
     date: "March 10, 2024",
-    image: "https://images.unsplash.com/photo-1556910602-3884ee920359?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     color: "coral",
   },
   {

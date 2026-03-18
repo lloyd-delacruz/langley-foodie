@@ -29,7 +29,7 @@ const destinations = [
     id: 5,
     name: "Venice",
     description: "Italian Romance",
-    image: "https://images.unsplash.com/photo-1514890547357-a9ee2887a35f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500",
+    image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ const destinations = [
     id: 8,
     name: "Marrakech",
     description: "Moroccan Markets",
-    image: "https://images.unsplash.com/photo-1533669952350-f9c6b6e40938?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500",
+    image: "https://images.unsplash.com/photo-1597212618440-806262de4f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500",
   },
 ];
 
