@@ -22,7 +22,12 @@
       "Bash(NODE_ENV=development npm run dev)",
       "Bash(nc:*)",
       "Bash(pkill:*)",
-      "Bash(true)"
+      "Bash(true)",
+      "Bash(rm supabase-schema.sql)",
+      "Bash(rm client/src/hooks/useRealtime.ts)",
+      "Bash(rm client/src/lib/storage.ts)",
+      "Bash(rm -rf attached_assets/)",
+      "Bash(rm -rf client/src/assets/)"
     ],
     "deny": []
   }

@@ -86,11 +86,10 @@ export default function ReelsSection() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                activeCategory === category
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === category
                   ? "text-white shadow-lg scale-105"
                   : "bg-gray-100 text-foreground hover:bg-gray-200"
-              }`}
+                }`}
               style={{
                 background: activeCategory === category
                   ? "linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)))"
