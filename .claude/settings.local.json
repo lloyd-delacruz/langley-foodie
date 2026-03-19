@@ -27,7 +27,8 @@
       "Bash(rm client/src/hooks/useRealtime.ts)",
       "Bash(rm client/src/lib/storage.ts)",
       "Bash(rm -rf attached_assets/)",
-      "Bash(rm -rf client/src/assets/)"
+      "Bash(rm -rf client/src/assets/)",
+      "Bash(npm install:*)"
     ],
     "deny": []
   }
